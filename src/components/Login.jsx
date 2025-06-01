@@ -8,12 +8,11 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { addUser } from "../redux/userSlice";
+import { BG_IMAGE } from "../utils/constants";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
@@ -47,7 +46,6 @@ const Login = () => {
               dispatch(
                 addUser({ uid: uid, email: email, displayName: displayName })
               );
-              navigate("/browse");
               // ...
             })
             .catch((error) => {
@@ -76,7 +74,6 @@ const Login = () => {
           dispatch(
             addUser({ uid: uid, email: email, displayName: displayName })
           );
-          navigate("/browse");
 
           // ...
         })
@@ -94,7 +91,7 @@ const Login = () => {
       <div className="absolute min-w-full">
         <img
           className="min-w-full"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/af2fac72-d956-4952-8686-4d45d359d78c/web/IN-en-20250526-TRIFECTA-perspective_5db3e163-56f7-47c7-9a65-b79b9d76bf24_large.jpg"
+          src={BG_IMAGE}
         />
       </div>
       <form
