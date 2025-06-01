@@ -42,7 +42,7 @@ const TitleSection = ({ movie }) => {
   return (
     <>
       <div className="w-full aspect-video text-white bg-gradient-to-tr from-black p-10 absolute">
-        <div className="absolute bottom-4/12 px-20">
+        <div className="absolute bottom-4/12">
           <h1 className="text-5xl font-bold">{movie?.title}</h1>
           <p className="w-4/12 mt-5">{movie?.overview}</p>
           <div className="flex my-10 gap-2">
