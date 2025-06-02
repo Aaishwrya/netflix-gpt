@@ -5,3 +5,11 @@ export const API_OPTIONS={
   method: 'GET',
   headers: {accept: 'application/json', Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNjI0MjMzZWFhOTY2ODg3MDRiNjY0YzM4ZGNjODRiNCIsIm5iZiI6MTc0ODcwNjg5Mi4zNTEsInN1YiI6IjY4M2IyNjRjZTgyYmYxZjIwNWFkNzczMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.KMzxmA7EAFHZRt4a5HO2e8S71fONpWFFqFMWn6NvG2w'}
 };
+
+
+export const MOVIE_CATEGORIES = [
+  { key: "upcoming", value: "Upcoming" },
+  { key: "popular", value: "Popular" },
+  { key: "top_rated", value: "Top Rated" },
+  { key: "now_playing", value: "Now Playing" },
+];
